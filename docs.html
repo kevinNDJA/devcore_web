@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="icons/Icon-512.png">
+  <title>Documentation DevCore | Référence technique premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/docs.css">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <header class="topbar-docs">
+    <a href="index.html" class="logo-docs">
+      <img src="icons/Icon-192.png" alt="DevCore Logo" class="logo-img-docs">
+      <div class="logo-text-docs"><span>DEV</span>CORE</div>
+    </a>
+    <button class="menu-toggle-docs" id="menu-toggle-docs" aria-label="Ouvrir le menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <aside id="sidebar-docs">
+    <a href="index.html" class="sidebar-title">
+      <img src="icons/Icon-192.png" alt="DevCore Logo">
+      <div><span>DEV</span>CORE</div>
+    </a>
+
+    <div class="menu-group">
+      <h4>Fondamentaux</h4>
+      <ul>
+        <li><a href="#welcome">Introduction Générale</a></li>
+        <li><a href="#vision">La Vision DevCore</a></li>
+        <li><a href="#architecture">Architecture de l'App</a></li>
+        <li><a href="#requirements">Configuration Requise</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h4>Déploiement Android</h4>
+      <ul>
+        <li><a href="#apk">Installation de l'APK</a></li>
+        <li><a href="#trust">Sources Inconnues & Sécurité</a></li>
+        <li><a href="#permissions">Autorisations Système</a></li>
+        <li><a href="#updates">Gestion des Mises à jour</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h4>Parcours de Formation</h4>
+      <ul>
+        <li><a href="#path-html">HTML5 : Fondations</a></li>
+        <li><a href="#path-css">CSS3 : Design & Style</a></li>
+        <li><a href="#path-js">JavaScript : Logique</a></li>
+        <li><a href="#path-vscode">Éditeurs & Outillage</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h4>Fonctionnalités Clés</h4>
+      <ul>
+        <li><a href="#ai">Intelligence Artificielle</a></li>
+        <li><a href="#editor">IDE Mobile Intégré</a></li>
+        <li><a href="#gamification">Gamification (XP/Séries)</a></li>
+        <li><a href="#offline">Mode Hors-Ligne</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h4>Support & Légal</h4>
+      <ul>
+        <li><a href="#privacy">Vie Privée & RGPD</a></li>
+        <li><a href="#community">Communauté & Support</a></li>
+        <li><a href="#license">Licences & Open Source</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <span class="badge">Documentation Complète v1.0.0</span>
+      <h1>Référence Technique DevCore</h1>
+      <p>L'outil ultime pour maîtriser le développement web moderne, conçu par des développeurs, pour les futurs développeurs.</p>
+    </header>
+
+    <section id="welcome">
+      <h2>Introduction Générale</h2>
+      <p>DevCore n'est pas une simple application éducative ; c'est un écosystème complet conçu pour transformer l'apprentissage du code. En 2026, la barrière entre l'idée et la création ne doit plus être limitée par l'accès à un ordinateur de bureau coûteux. DevCore apporte la puissance d'un environnement de développement professionnel directement dans votre poche.</p>
+      <p>Cette documentation a pour but de vous fournir toutes les informations nécessaires, de l'installation de votre premier APK à la maîtrise des concepts avancés de JavaScript asynchrone.</p>
+    </section>
+
+    <section id="vision">
+      <h2>La Vision DevCore</h2>
+      <p>Notre mission repose sur trois piliers fondamentaux :</p>
+      <ol>
+        <li><strong>Accessibilité Universelle :</strong> Le code est le langage du futur. Il doit être accessible à tous, partout, sans distinction de matériel.</li>
+        <li><strong>Apprentissage par l'Action :</strong> On n'apprend pas à nager en regardant des vidéos. On n'apprend pas à coder sans écrire de lignes de code. DevCore impose la pratique à chaque étape.</li>
+        <li><strong>Accompagnement Intelligent :</strong> L'IA ne doit pas remplacer le développeur, elle doit l'élever. Notre assistant Gemini Pro est là pour expliquer le "pourquoi", pas juste donner le "comment".</li>
+      </ol>
+    </section>
+
+    <section id="architecture">
+      <h2>Architecture de l'Application</h2>
+      <p>DevCore est bâti sur une architecture hybride de pointe, combinant la fluidité du natif avec la flexibilité du web.</p>
+      <div class="grid-docs">
+        <div class="doc-card">
+          <strong>Flutter 3.40+</strong>
+          <p>Utilisé pour l'interface utilisateur multiplateforme, garantissant 60 FPS et un design Material 3 cohérent.</p>
+        </div>
+        <div class="doc-card">
+          <strong>Firebase Core</strong>
+          <p>Gère l'authentification sécurisée, la base de données Firestore pour votre progression et le stockage cloud des avatars.</p>
+        </div>
+        <div class="doc-card">
+          <strong>WebView Engine</strong>
+          <p>Un moteur de rendu Chromium intégré permet de tester votre code HTML/CSS/JS dans un environnement de navigateur réel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements">
+      <h2>Configuration Requise</h2>
+      <p>Pour profiter d'une expérience fluide, assurez-vous que votre appareil respecte les spécifications suivantes :</p>
+      <ul>
+        <li><strong>Processeur :</strong> Octa-core 1.8GHz ou supérieur.</li>
+        <li><strong>Mémoire Vive (RAM) :</strong> 2 Go strict minimum, 4 Go fortement recommandés pour les sessions d'IA intensives.</li>
+        <li><strong>Système d'exploitation :</strong> Android 7.0 (API 24) jusqu'à Android 15 (API 35).</li>
+        <li><strong>Réseau :</strong> Une connexion 4G/5G ou Wi-Fi est nécessaire pour la validation des quiz et les requêtes IA.</li>
+      </ul>
+    </section>
+
+    <section id="apk">
+      <h2>Installation de l'APK</h2>
+      <p>L'installation via APK (Android Package Kit) est le mode de distribution privilégié pour DevCore pour permettre un cycle de mise à jour rapide.</p>
+      <h3>Procédure détaillée</h3>
+      <ol>
+        <li>Téléchargez le fichier <strong>devcore-latest.apk</strong> depuis notre landing page.</li>
+        <li>Une fois le téléchargement terminé, cliquez sur la notification de fin de téléchargement.</li>
+        <li>Si votre navigateur demande l'autorisation d'installer des fichiers, acceptez-la.</li>
+      </ol>
+    </section>
+
+    <section id="trust">
+      <h2>Sources Inconnues & Sécurité</h2>
+      <p>Il est normal qu'Android affiche un message d'alerte lors de l'installation d'un APK hors Play Store. DevCore est un projet vérifié et sécurisé.</p>
+      <div class="tip">
+        <strong>Pourquoi ce message ?</strong> Google protège ses utilisateurs en signalant toute application non installée via sa plateforme officielle. En activant "Autoriser cette source", vous permettez simplement l'installation manuelle.
+      </div>
+      <p>Nous recommandons de désactiver l'option après l'installation si vous souhaitez maintenir une sécurité maximale sur votre appareil.</p>
+    </section>
+
+    <section id="permissions">
+      <h2>Autorisations Système</h2>
+      <p>DevCore demande un nombre minimal de permissions pour respecter votre vie privée :</p>
+      <ul>
+        <li><strong>Internet :</strong> Pour télécharger les cours, l'IA et synchroniser votre profil.</li>
+        <li><strong>Stockage (Galerie) :</strong> Uniquement si vous souhaitez changer votre photo de profil.</li>
+        <li><strong>Notifications :</strong> Pour les rappels de série (streak) et les annonces de nouveaux cours.</li>
+      </ul>
+    </section>
+
+    <section id="path-html">
+      <h2>HTML5 : Fondations</h2>
+      <p>Le parcours HTML de DevCore couvre l'intégralité du standard HTML5. Ce n'est pas juste une liste de balises, c'est une étude de la structure de l'information.</p>
+      <h3>Les 12 premiers chapitres :</h3>
+      <ol>
+        <li>Introduction au Web et aux navigateurs.</li>
+        <li>La structure d'un document (Doctype, Head, Body).</li>
+        <li>Le texte : Titres, paragraphes et listes.</li>
+        <li>La sémantique : Pourquoi utiliser &lt;article&gt; plutôt que &lt;div&gt;.</li>
+        <li>Les liens : Navigation interne et externe.</li>
+        <li>Les médias : Images, figures et légendes.</li>
+        <li>Les formulaires : Inputs, labels et validation native.</li>
+        <li>Les tableaux : Présentation de données complexes.</li>
+        <li>Audio et Vidéo : Intégration multimédia sans plugins.</li>
+        <li>Le SEO technique : Balises meta et Open Graph.</li>
+        <li>L'accessibilité : Aria-labels et navigation clavier.</li>
+        <li>Projet final : Créer un CV en HTML pur.</li>
+      </ol>
+    </section>
+
+    <section id="path-css">
+      <h2>CSS3 : Design & Style</h2>
+      <p>Le parcours CSS est notre plus vaste module avec plus de 50 chapitres. Nous transformons les pages statiques en expériences visuelles époustouflantes.</p>
+      <div class="code-block">
+/* Concept de base enseigné : La Box Model */
+.element {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid var(--primary);
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+      </div>
+      <h3>Concepts Avancés :</h3>
+      <p>Vous apprendrez à utiliser les <strong>Variables CSS</strong> pour créer des thèmes dynamiques, à maîtriser <strong>Flexbox</strong> pour le centrage vertical (enfin !), et à utiliser <strong>CSS Grid</strong> pour des mises en page de type magazine.</p>
+    </section>
+
+    <section id="path-js">
+      <h2>JavaScript : Logique</h2>
+      <p>Le moteur du web. Ici, vous passez de l'affichage statique à l'interactivité dynamique.</p>
+      <ul>
+        <li><strong>Bases :</strong> Variables (let/const), Types, Opérateurs.</li>
+        <li><strong>Contrôle :</strong> Conditions (if/else/switch), Boucles (for/while/map).</li>
+        <li><strong>DOM :</strong> Sélection d'éléments, modification de contenu, écoute d'événements.</li>
+        <li><strong>Asynchrone :</strong> Promesses, Async/Await et Fetch API pour appeler des données externes.</li>
+      </ul>
+    </section>
+
+    <section id="path-vscode">
+      <h2>Éditeurs & Outillage</h2>
+      <p>Coder dans l'application est un début, mais nous vous préparons au monde professionnel. Un module entier est dédié à la configuration de <strong>Visual Studio Code</strong>.</p>
+      <ul>
+        <li>Installation et thèmes.</li>
+        <li>Les extensions indispensables (Prettier, Live Server).</li>
+        <li>Utilisation du terminal intégré.</li>
+        <li>Raccourcis clavier pour coder 3x plus vite.</li>
+      </ul>
+    </section>
+
+    <section id="ai">
+      <h2>Intelligence Artificielle</h2>
+      <p>L'assistant IA de DevCore est votre tuteur privé. Contrairement à ChatGPT qui peut parfois faire le travail à votre place, notre IA est configurée avec une <strong>méthode maïeutique</strong>.</p>
+      <p>Elle vous posera des questions pour vous amener à la solution, expliquera vos erreurs de syntaxe et pourra même générer des quiz personnalisés basés sur vos points faibles identifiés.</p>
+    </section>
+
+    <section id="editor">
+      <h2>IDE Mobile Intégré</h2>
+      <p>Notre éditeur de code supporte la coloration syntaxique, l'auto-complétion intelligente et un terminal virtuel. Chaque ligne de code que vous écrivez peut être testée instantanément dans la fenêtre d'aperçu.</p>
+    </section>
+
+    <section id="gamification">
+      <h2>Gamification (XP/Séries)</h2>
+      <p>Pour rester motivé, nous avons emprunté les meilleurs concepts des jeux vidéo :</p>
+      <ul>
+        <li><strong>Le Système de Niveaux :</strong> Chaque action positive vous rapporte de l'XP. Atteindre le niveau 10 fait de vous un "Apprenti Confirmé".</li>
+        <li><strong>Les Séries :</strong> Codez au moins 5 minutes par jour pour maintenir votre série.</li>
+        <li><strong>Classement :</strong> Comparez votre progression avec les autres membres de la communauté DevCore.</li>
+      </ul>
+    </section>
+
+    <section id="offline">
+      <h2>Mode Hors-Ligne</h2>
+      <p>Vous voyagez ou n'avez plus de data ? Pas de souci. Les leçons que vous avez déjà ouvertes sont automatiquement mises en cache sur votre appareil. Vous pouvez relire le contenu et réviser vos notes sans connexion internet.</p>
+    </section>
+
+    <section id="privacy">
+      <h2>Vie Privée & RGPD</h2>
+      <p>Vos données vous appartiennent. Nous utilisons Firebase Authentication pour garantir que personne d'autre que vous n'accède à votre compte. DevCore respecte les directives du RGPD :</p>
+      <ul>
+        <li>Droit à l'oubli : Vous pouvez supprimer votre compte et toutes les données associées depuis les réglages.</li>
+        <li>Transparence : Nous ne vendons aucune donnée à des tiers. Vos interactions avec l'IA sont anonymisées.</li>
+      </ul>
+    </section>
+
+    <section id="community">
+      <h2>Communauté & Support</h2>
+      <p>Besoin d'aide ? Vous n'êtes jamais seul. Rejoignez notre serveur Discord officiel ou utilisez l'onglet "Communauté" dans l'application pour poser vos questions aux autres apprenants.</p>
+    </section>
+
+    <section id="license">
+      <h2>Licences & Open Source</h2>
+      <p>DevCore utilise de nombreuses bibliothèques open-source que nous remercions. La liste complète des licences est disponible dans les réglages de l'application sous la section "Mentions Légales".</p>
+    </section>
+
+    <section id="updates">
+      <h2>Gestion des Mises à jour</h2>
+      <p>L'application vérifie automatiquement au démarrage si une version plus récente est disponible sur nos serveurs. Si c'est le cas, vous recevrez une notification vous proposant de télécharger le nouvel APK.</p>
+      <p>Nous recommandons de mettre à jour régulièrement pour profiter des derniers cours et des améliorations de l'IA.</p>
+    </section>
+
+    <footer class="doc-footer">
+      <p>&copy; 2026 DevCore Educational Framework. Tous droits réservés.</p>
+      <p class="doc-footer-note">Propulsé par Flutter & Google Gemini Pro.</p>
+    </footer>
+  </main>
+
+  <!-- Scripts séparés -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>
